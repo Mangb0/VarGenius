@@ -1,5 +1,9 @@
 # variable-naming
 
+### Project Description
+AI gives you variable names
+No more headaches with variable names
+
 ## Project setup
 ```
 npm install
