@@ -22,13 +22,18 @@ const askAi = () => {
   btnText.value = "Thinking...🤔";  
   http.post('/completions', {
       model: "text-davinci-003",
-      prompt: content.value,
-      max_tokens: 1000,
+      prompt: `Sugeest five name for ${content.value} variable name and describe what it does.`,
       temperature: 0,
+      top_p: 1,
+      stream: false,
+      logprobs: null,
+      max_tokens: 100,
     })
     .then((response) => {
       console.log(response);
-      res.value = response.data.choices[0].text;
+      //res.value에 답변을 넣어주고 앞뒤 공백제거
+      res.value = response.data.choices[0].text.trim();
+
     })
     .catch((error) => {
       console.log(error);
