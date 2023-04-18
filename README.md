@@ -1,4 +1,4 @@
-# variable-naming
+# VarGenius
 
 ### Project Description
 AI gives you variable names
